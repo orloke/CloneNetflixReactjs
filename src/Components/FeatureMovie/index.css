@@ -72,3 +72,20 @@
     color: #999;
 }
 
+@media (max-width:760px) {
+    .featured{
+        height: 90vh;    
+    }
+    .featured--name{
+        font-size: 40px;
+    }
+    .featured--watch, .featured--add{
+        font-size: 15px;
+    }
+    .featured--overview{
+        margin-top: 15px;
+        font-size:18px;
+        color: #999;
+        width: 100%;
+    }
+}

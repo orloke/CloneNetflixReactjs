@@ -18,7 +18,6 @@ export default function Padrao({title, items}) {
         if(x < window.innerWidth - items.results.length*150){
             x = window.innerWidth - items.results.length*150 - 60
         }
-        console.log(x, window.innerWidth - items.results.length*150);
         setScrollx(x)
     }
     return(
