@@ -4,6 +4,14 @@ import './index.css'
 export default function padrao({item}){
     let data = new Date(item.first_air_date)
     let genero = item.genres.map(item=>item.name)
+    let reduzirOverview = ()=>{
+        if(item.overview.length>200){
+            let descricao = item.overview.substring(0,200)+'...'
+            return descricao
+        }
+        return item.overview
+    }
+
     return(
         <div>
             
@@ -22,7 +30,7 @@ export default function padrao({item}){
                             <div className="featured--points">{item.number_of_seasons} temporada{item.number_of_seasons<=1?'':'s'}</div>
 
                         </div>
-                        <div className="featured--overview">{item.overview}</div>
+                        <div className="featured--overview">{reduzirOverview()}</div>
                         <div className="feature--buttons">
                             <a href={`/watch/${item.id}`} className="featured--watch">Assistir</a>
                             <a href={`/list/add/${item.id}`} className="featured--add">+ Minha Lista</a>
